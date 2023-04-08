@@ -25,7 +25,7 @@ public class DealerTest {
 			int sumOfCards = 0;
 			for (int i = 0; i < numCards; i++) {
 				Card dealtCard = deck.dealCard();
-				sumOfCards += dealtCard.getValue().getValue();
+				sumOfCards += dealtCard.getRank().getValue();
 				System.out.println("You now have: " + dealtCard + ", "
 						+ "total: " + sumOfCards + ", "
 						+ deck.checkDeckSize() + " cards left");
