@@ -1,23 +1,25 @@
 package com.skilldistillery.blackjack.entities;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Player {
-	BlackjackHand hand = new BlackjackHand();
-	List<Card> playerCards = new ArrayList<>();
-
-	public List<Card> playerHand() {
-		return playerCards;
+	protected BlackjackHand hand = new BlackjackHand();
+	
+	public Hand playerHand() {
+		return hand;
 	}
 
-	public void hit(Card card) {
+	public void addCardToHand(Card card) {
 		hand.addCard(card);
 	}
 
 	public void stay() {
-//		do not add any cards, move on
-		System.out.println("Dealers turn...");
+		System.out.println("ending turn...");
 	}
 
+	public BlackjackHand getHand() {
+		return hand;
+	}
+
+	public void setHand(BlackjackHand hand) {
+		this.hand = hand;
+	}
 }

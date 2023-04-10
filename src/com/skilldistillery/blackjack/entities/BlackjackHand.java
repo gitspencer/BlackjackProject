@@ -1,14 +1,12 @@
 package com.skilldistillery.blackjack.entities;
 
-public class BlackjackHand extends Hand{
-	Deck deck = new Deck();
-	int sumOfCards = 0;
-	
+public class BlackjackHand extends Hand{	
 
 	public BlackjackHand() {}
 	
 	@Override
 	public int getHandValue() {
+		int sumOfCards = 0;
 		for (int i = 0; i < hand.size(); i++) {	
 			sumOfCards += hand.get(i).getRank().getValue(); 
 		}
@@ -28,5 +26,4 @@ public class BlackjackHand extends Hand{
 		}
 		return false;
 	}
-
 }

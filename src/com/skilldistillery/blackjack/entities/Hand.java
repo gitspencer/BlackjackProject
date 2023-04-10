@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Hand {
-	protected List<Card> hand = new ArrayList<>();
+	protected List<Card> hand;
 	
-	public Hand() {}
+	public Hand() {
+		hand = new ArrayList<>();
+	}
 	
 	public abstract int getHandValue();
 
@@ -21,5 +23,4 @@ public abstract class Hand {
 	public List<Card> getHand() {
 		return hand;
 	}
-
 }

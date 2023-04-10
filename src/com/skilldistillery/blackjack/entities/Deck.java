@@ -32,6 +32,11 @@ public class Deck {
 		return dealtCard;
 	}
 
+	public Card dealCard(Hand hand) {
+		Card dealtCard = deck.remove(0);   
+		return dealtCard;
+	}
+
 	public int checkDeckSize() {
 		return deck.size();
 	}
